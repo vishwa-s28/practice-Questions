@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>JS loops</h2>
+
+    <p><b>If..else :</b></p>
+    <p id="if_else"></p>
+
+    <p><b>Switch case :</b></p>
+    <p id="switch"></p>
+
+    <p><b>For loop :</b></p>
+    <p id="forloop"></p>
+
+    <p><b>For Each :</b></p>
+    <!--use for array-->
+    <p id="foreach"></p>
+
+    <p><b>For in :</b></p>
+    <!--use for object-->
+    <p id="forin"></p>
+
+    <p><b>For of :</b></p>
+    <!--use for array,string,etc-->
+    <p id="forof"></p>
+
+    <p><b>While loop :</b></p>
+    <p id="while"></p>
+
+    <script>
+      //if..else
+      const time = new Date().getHours();
+      let greeting;
+      if (time < 10) {
+        greeting = "Good morning";
+      } else if (time < 20) {
+        greeting = "Good day";
+      } else {
+        greeting = "Good evening";
+      }
+      document.getElementById("if_else").innerHTML = greeting;
+
+      //switch case
+      let day = new Date().getDay();
+      switch (day) {
+        case 0:
+          day = "Sunday";
+          break;
+        case 1:
+          day = "Monday";
+          break;
+        case 2:
+          day = "Tuesday";
+          break;
+        case 3:
+          day = "Wednesday";
+          break;
+        case 4:
+          day = "Thursday";
+          break;
+        case 5:
+          day = "Friday";
+          break;
+        case 6:
+          day = "Saturday";
+          break;
+        default:
+          day = "Good Day";
+      }
+      document.getElementById("switch").innerHTML = "Today is " + day;
+
+      //for loop
+      const cars = ["BMW", "Volvo", "Ford", "Audi"];
+      let text = "";
+      for (let i = 0; i < cars.length; i++) {
+        text += cars[i] + "<br>";
+      }
+      document.getElementById("forloop").innerHTML = text;
+
+      //for--each
+      const numbers = [45, 4, 9, 16, 25];
+      let n = "";
+      numbers.forEach(myFunction);
+      document.getElementById("foreach").innerHTML = n;
+
+      function myFunction(value, index, array) {
+        n += value + "<br>";
+      }
+
+      //for..in
+      const person = { fname: "vishwa", lname: "satasiya", age: 21 };
+      let txt = "";
+      for (let x in person) {
+        txt += person[x] + " ";
+      }
+      document.getElementById("forin").innerHTML = txt;
+
+      //for..of
+      let Name = "Vishwa";
+      let name = "";
+      for (let x of Name) {
+        name += x + "<br>";
+      }
+      document.getElementById("forof").innerHTML = name;
+
+      //while loop
+      let i = 0;
+      let car = "";
+      while (cars[i]) {
+        car += cars[i] + "<br>";
+        i++;
+      }
+
+      document.getElementById("while").innerHTML = car;
+    </script>
+  </body>
+</html>

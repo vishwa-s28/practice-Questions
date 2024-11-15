@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const employees = [
+        { id: 1, name: "John", designation: "Manager" },
+        { id: 2, name: "Jane", designation: "Developer" },
+        { id: 3, name: "Bob", designation: "Manager" },
+      ];
+
+      function desi(employees) {
+        const high = employees.filter((value) => {
+          return value.designation == "Manager";
+        });
+        return high;
+      }
+      const res = desi(employees);
+      console.log(res);
+    </script>
+  </body>
+</html>

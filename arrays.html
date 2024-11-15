@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JS Arrays</h1>
+<p>Array is : ["Banana", "Orange", "Apple", "Mango"]</p>
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="len"></p>
+<p id="str"></p>
+<p id="char"></p>
+<p id="slice"></p>
+<p id="splice"></p>
+<p id="sort"></p>
+<p id="reverse"></p>
+
+
+<script>
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+const fruits2 = fruits.map(myFunction);
+
+const numbers = [45, 4, 9, 16, 25];
+const over18 = numbers.filter(myFunction1);
+let sum = numbers.reduce(myFunction2);
+
+const arr = [...fruits,...numbers]
+
+document.getElementById("demo").innerHTML = "using map : "+fruits2;
+document.getElementById("demo1").innerHTML = "using filter : "+over18;
+document.getElementById("demo2").innerHTML = "sum is : "+sum;
+document.getElementById("demo3").innerHTML = arr;
+
+function myFunction(value, index, array) {
+  return value ;
+}
+function myFunction1(value) {
+  return value > 18;
+}
+function myFunction2(total, value, index, array) {
+  return total + value;
+}
+
+document.getElementById("len").innerHTML = "length is : "+fruits.length;
+document.getElementById("str").innerHTML = "string is : "+fruits.toString();
+document.getElementById("char").innerHTML = "fruit at 0 position is : "+fruits.at(0);
+document.getElementById("slice").innerHTML = "slice string 2 to 6 index : "+fruits.slice(2);
+document.getElementById("splice").innerHTML = "splice 2 fruites kiwi and lemon at index 2 "+fruits.splice(2, 0, "Lemon", "Kiwi");
+;
+document.getElementById("sort").innerHTML = "sort array : "+fruits.sort();
+document.getElementById("reverse").innerHTML = "reverse array : "+fruits.reverse(2,6);
+
+</script>
+</body>
+</html>

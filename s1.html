@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = "Hello World"
+        function myFunc(s,c){
+            let count = 0;
+            for(x of s){
+                if(x.toLowerCase()==c){
+                    count+=1
+                }
+            }
+            return count;
+        }
+        console.log(myFunc(str,"o"))
+    </script>
+</body>
+</html>

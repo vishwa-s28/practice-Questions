@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+     const employees = [
+  { id: 1, name: "John", salary: 5000 },
+  { id: 2, name: "Jane", salary: 7000 },
+  { id: 3, name: "Bob", salary: 6000 }
+];
+      function check(employees,thresold) {
+        return employees.every((employee) =>employee.salary<=thresold);
+      }
+      const res = check(employees,8000)
+      console.log(res)
+    </script>
+  </body>
+</html>

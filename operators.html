@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>8+4</p>
+        
+        <p id="add"></p>
+        <p id="sub"></p>
+        <p id="mul"></p>
+        <p id="div"></p>
+        <p id="mod"></p>
+        <p id="exp"></p>
+        <p id="inc"></p>
+        <p id="dec"></p>
+        <p id="type"></p>
+
+        <script>
+        let a = 8;
+        let b = 4;
+        document.getElementById("add").innerHTML = "addition is : "+(a+b);
+        document.getElementById("sub").innerHTML = "subtraction is : "+(a-b);
+        document.getElementById("mul").innerHTML = "multiplication is : "+(a*b);
+        document.getElementById("div").innerHTML = "division is : "+(a/b);
+        document.getElementById("mod").innerHTML = "modulus is : "+(a%b);
+        document.getElementById("exp").innerHTML = "Exponentiation is : "+(a**b);
+        document.getElementById("inc").innerHTML = "Increment of 'a' is : "+(++a);
+        document.getElementById("dec").innerHTML = "decrement of 'b' is : "+(--b);
+        document.getElementById("type").innerHTML = "type of 'b' is : "+typeof b;
+        </script>
+</body>
+</html>

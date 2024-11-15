@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>JS Maps</h1>
+    <h2>The set() Method</h2>
+
+    <p id="map"></p>
+    <p id="set"></p>
+
+    <script>
+      const fruit = new Map([
+        ["apples", 500],
+        ["bananas", 300],
+        ["oranges", 200],
+      ]);
+
+      let numb = fruit.get("apples");
+      document.getElementById("map").innerHTML =
+        "There are " + numb + " apples.";
+
+      const fruits = new Set();
+      fruits.add("apple");
+      fruits.add("banana");
+      fruits.add("orange");
+      fruits.add("orange");
+      document.getElementById("set").innerHTML =
+        "the set has " + fruits.size + " values.the set has 'kiwi' "+fruits.has('kiwi');
+    </script>
+  </body>
+</html>

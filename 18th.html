@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const employees = [
+  { id: 1, name: "John", designation: "Manager" },
+  { id: 2, name: "Jane", designation: "Developer" },
+  { id: 3, name: "Anna", designation: "Designer" },
+  { id: 4, name: "Mark", designation: "Manager" }
+];
+        function myFnc(emp,substr){
+            return emp.filter(e=>
+                e.name.toLowerCase()
+                .includes(substr.toLowerCase())
+            )
+        }
+        console.log(myFnc(employees,"an"))
+    </script>
+</body>
+</html>

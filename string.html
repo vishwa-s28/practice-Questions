@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JS Strings</h1>
+
+<p>The string is: "    Good Evening"</p>
+<p id="len"></p>
+<p id="char"></p>
+<p id="slice"></p>
+<p id="substr"></p>
+<p id="substring"></p>
+<p id="upper"></p>
+<p id="lower"></p>
+<p id="concat"></p>
+<p id="trim"></p>
+<p id="repeat"></p>
+<p id="replace"></p>
+
+
+<script>
+let text = "Good Evening";
+document.getElementById("len").innerHTML = "length is : "+text.length;
+document.getElementById("char").innerHTML = "character at 0 position is : "+text.charAt(0);
+document.getElementById("slice").innerHTML = "slice string 2 to 6 index : "+text.slice(2,6);
+document.getElementById("substr").innerHTML = "substr string to index 2 to length 6 : "+text.substr(2,6);
+document.getElementById("substring").innerHTML = "substring string to index 2 to 6 : "+text.substring(2,6);
+document.getElementById("upper").innerHTML = "in uppercase : "+text.toUpperCase();
+document.getElementById("lower").innerHTML = "in lowercase :  "+text.toLowerCase();
+document.getElementById("concat").innerHTML = "concat 2 string : "+text.concat(" ","All");
+document.getElementById("trim").innerHTML = "trim string : "+text.trim();
+document.getElementById("repeat").innerHTML = "repeat string : "+text.repeat(2);
+document.getElementById("replace").innerHTML = "replace string : "+text.replace("Evening","Morning");
+</script>
+
+</body>
+</html> 

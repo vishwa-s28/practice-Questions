@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>JS Object</p>
+
+    <p id="demo"></p>
+
+    <p id="obj"></p>
+
+<script>
+const person = {
+  firstName: "vishwa",
+  lastName: "satasiya",
+  age: 21,
+  eyecolor: "gray",
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+
+document.getElementById("demo").innerHTML =
+person.fullName() + " is " + person.age + " years old.";
+
+document.getElementById("obj").innerHTML =JSON.stringify(person); 
+</script>
+</body>
+</html>

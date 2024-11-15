@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const employees = [
+        { id: 1, name: "John", designation: "Manager", salary: 5000 },
+        { id: 2, name: "Jane", designation: "Developer", salary: 7000 },
+        { id: 3, name: "Alice", designation: "Designer", salary: 6000 },
+      ];
+      function myFunc(employees) {
+        const summaries = employees.filter((employee) => {
+            return employee.salary >= 6000
+        });
+        const final = summaries.forEach(element => {
+            element.designation = "senior developer"
+        });
+        return employees
+      }
+      console.log(myFunc(employees))
+</script>
+  </body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //8. Sort an Array of Strings by Length
+      //const arr = ["apple", "pie", "banana", "grape"]
+      //arr.sort((a,b)=>{return a.length-b.length})
+      //console.log(arr)
+
+      // 9. Convert an Array of Objects to a Single Object
+      //const arr = [{ id: 1, name: "John" }, { id: 2, name: "Jane" }]
+      //let x = arr.reduce((acc,a)=> {
+      //    acc[a.id]=a
+      //    return acc
+      //})
+      //console.log(x)
+
+      //11. Replace All Occurrences of a Word in a String
+      // let str = "The quick brown fox jumps over the lazy dog"
+      //console.log(str.replace("fox","cat"))
+
+      // 12. Find the Index of a Substring in a String
+      // console.log(str.indexOf("vish"))
+
+      //13. Flatten an Array of Arrays
+      // const arr = [[1, 2], [3, 4], [5, 6]]
+      // console.log(arr.flatMap(x=>x))
+
+      //14. Create a Frequency Map of Characters in a String
+      // let str = "Helloh"
+      // const freqMap = {}
+      // for(x of str.toLowerCase()){
+      //     if(freqMap[x]){
+      //         freqMap[x]++;
+      //     }else{
+      //         freqMap[x]=1
+      //     }
+      // }
+      // console.log(freqMap)
+
+      //15. Capitalize the First Letter of Each Word in a String
+      // let str = "vishwa satasiya"
+      // let res = str.split(" ")
+      // for(let i=0; i<res.length; i++){
+      //     res[i] = res[i].replace(res[i].charAt(0),res[i].charAt(0).toUpperCase())
+      // }
+      // console.log(res.join(" "))
+
+      //16. Find the Second Largest Number in an Array
+      //   const arr = [6, 4, 3, 5, 1, 2];
+      //   let res = arr.sort((a, b) => {
+      //     return a - b;
+      //   })
+      //   console.log(res[res.length-2])
+
+      //17. Merge Two Arrays and Remove Duplicates
+      // let arr = [[1, 2, 3], [2, 3, 4, 4], [2, 3, 4, 4]]
+      // let set = new Set(arr.flatMap(x=>x))
+      // console.log(set)
+
+      //19. Create a Sentence from an Array of Words
+      //   const arr = ["I", "love", "programming"]
+      //   console.log(arr.join(" "))
+
+      //20. Remove a Property from an Object
+      // const obj =  { id: 1, name: "John", designation: "Manager" }
+      // delete(obj.name)
+      // console.log(obj)
+
+      //Find the Most Frequent Element in an Array
+      //   const arr = [1, 1, 2, 3, 4, 3, 5, 1];
+      //   const freq = {}
+      //   for(let x of arr){
+      //   freq[x] = (freq[x] || 0)+1
+      //   }
+      //   let maxCount = 0
+      //   let maxRepeatElement = ""
+      //   for(let y in freq){
+      //     if(freq[y]>maxCount){
+      //         maxCount = freq[y]
+      //         maxRepeatElement = y
+      //     }
+      //   }
+      //   console.log(maxCount,maxRepeatElement)
+
+      //Find the First Non-Repeating Character in a String
+      // let str = "swiss"
+      // let str2 = {}
+      // for(x of str){
+      //     str2[x] = (str2[x] || 0)+1
+      // }
+      // for(x of str){
+      //     if(str2[x]===1){
+      //         console.log(x)
+      //         break
+      //     }
+      // }
+
+      //Merge Two Sorted Arrays
+      // const arr = [[1,3,5],[2,4,6]]
+      // const arr2 = arr.flatMap(x=>x).sort((a,b)=> a-b)
+      // console.log(arr2)
+
+      //   const arr = [1, [2, [3, 4]], 5];
+      //   function myFunc(arr) {
+      //     let arr2 = [];
+      //     for (x of arr) {
+      //       if (Array.isArray(x)) {
+      //         arr2 = arr2.concat(myFunc(x));
+      //       } else {
+      //         arr2.push(x);
+      //       }
+      //     }
+      //     return arr2;
+      //   }
+      //   console.log(myFunc(arr));
+
+      //Count Vowels and Consonants in a String
+      //   let str = "Hello";
+      //   let vowels = 0;
+      //   consonent = 0;
+      //   for (x of str.toLowerCase()) {
+      //     if (x == "a" || x == "e" || x == "i" || x == "o" || x == "u") {
+      //       vowels += 1;
+      //     } else {
+      //       consonent += 1;
+      //     }
+      //   }
+      //   console.log(vowels, consonent);
+
+      //Group Elements by Key in an Array of Objects
+      function groupBy(arr, key) {
+        return arr.reduce((grouped, currentItem) => {
+          const keyValue = currentItem[key];
+          if (!grouped[keyValue]) {
+            grouped[keyValue] = [];
+          }
+
+          grouped[keyValue].push(currentItem);
+
+          return grouped;
+        }
+        , {}
+    );
+      }
+
+      const people = [
+        { name: "Alice", age: 25 },
+        { name: "Bob", age: 25 },
+        { name: "Charlie", age: 30 },
+        { name: "David", age: 30 },
+        { name: "Eve", age: 35 },
+      ];
+
+      const groupedByAge = groupBy(people, "age");
+      console.log(groupedByAge);
+    </script>
+  </body>
+</html>

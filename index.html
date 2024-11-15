@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const arr = [
+        { id: 1, name: "vishwa", des: "sd" },
+        { id: 2, name: "yash", des: "qa" },
+        { id: 3, name: "nidhi", des: "sd" },
+      ];
+      function changeName(num, namee) {
+        const x = arr.find((o) => o.id === num);
+        x.name=namee
+        return arr;
+      }
+
+      console.log(changeName(1, "asdfg"));
+    </script>
+  </body>
+</html>

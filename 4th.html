@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const employees = [
+  { id: 1, name: "John", designation: "Manager" },
+  { id: 2, name: "Jane", designation: "Developer" },
+  { id: 3, name: "Bob", designation: "Manager" }
+];
+      function myFunc({designation}){
+        return designation == "Manager"
+      }
+      const res = Object.groupBy(employees,myFunc);
+      console.log(res)
+    </script>
+  </body>
+</html>
