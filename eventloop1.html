@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   console.log("Start");
+      //   setTimeout(() => {
+      //     console.log("Inside setTimeout");
+      //   }, 0);
+      //   console.log("End");
+
+      //   console.log("Start");
+      //   setTimeout(() => {
+      //     console.log("First Timeout");
+      //   }, 0);
+      //   setTimeout(() => {
+      //     console.log("Second Timeout");
+      //   }, 1000);
+      //   console.log("End");
+
+      //   console.log("Start");
+      //   setTimeout(() => {
+      //     console.log("Inside setTimeout");
+      //   }, 0);
+      //   Promise.resolve().then(() => {
+      //     console.log("Inside Promise");
+      //   });
+      //   console.log("End");
+
+      //   console.log("Start");
+      //   setTimeout(() => {
+      //     console.log("First Timeout");
+      //     setTimeout(() => {
+      //       console.log("Second Timeout");
+      //     }, 0);
+      //   }, 0);
+      //   console.log("End");
+
+      //   console.log("Start");
+      //   Promise.resolve().then(() => {
+      //     console.log("Inside Promise");
+      //     setTimeout(() => {
+      //       console.log("Inside setTimeout");
+      //     }, 0);
+      //   });
+      //   console.log("End");
+
+      //   console.log("Start");
+      //   Promise.resolve().then(() => {
+      //     console.log("First Promise");
+      //   });
+      //   Promise.resolve().then(() => {
+      //     console.log("Second Promise");
+      //   });
+      //   console.log("End");
+
+      //   console.log("Start");
+      //   setTimeout(() => {
+      //     console.log("Inside setTimeout");
+      //   }, 0);
+      //   Promise.resolve()
+      //     .then(() => {
+      //       console.log("Inside Promise");
+      //     })
+      //     .then(() => {
+      //       console.log("Second Promise");
+      //     });
+      //   console.log("End");
+
+      //   console.log("Start");
+      //   setTimeout(() => {
+      //     console.log("First Timeout");
+      //     Promise.resolve().then(() => {
+      //       console.log("Inside Promise");
+      //     });
+      //   }, 0);
+      //   console.log("End");
+
+      //   console.log("Start");
+      //   async function fetchData() {
+      //     console.log("Fetching data...");
+      //     await new Promise((resolve) => setTimeout(resolve, 0));
+      //     console.log("Data fetched");
+      //   }
+      //   fetchData();
+      //   console.log("End");
+
+      //   console.log("Start");
+      //   setInterval(() => {
+      //     console.log("Inside setInterval");
+      //   }, 0);
+      //   setTimeout(() => {
+      //     console.log("Inside setTimeout");
+      //   }, 0);
+      //   console.log("End");
+
+      //   console.log("Start");
+      //   async function fetchData() {
+      //     await Promise.resolve().then(() => console.log("First Promise"));
+      //     await Promise.resolve().then(() => console.log("Second Promise"));
+      //   }
+      //   fetchData();
+      //   console.log("End");
+
+      //   console.log("Start");
+      //   Promise.resolve()
+      //     .then(() => {
+      //       console.log("First Promise");
+      //       return new Promise((resolve) => {
+      //         setTimeout(() => {
+      //           console.log("Inside Timeout in Promise Chain");
+      //           resolve();
+      //         }, 0);
+      //       });
+      //     })
+      //     .then(() => {
+      //       console.log("Second Promise");
+      //     });
+      //   console.log("End");
+
+      console.log("Start");
+      setTimeout(() => {
+        console.log("First Timeout");
+        setTimeout(() => {
+          console.log("Second Timeout");
+          setTimeout(() => {
+            console.log("Third Timeout");
+          }, 0);
+        }, 0);
+      }, 0);
+      console.log("End");
+    </script>
+  </body>
+</html>
