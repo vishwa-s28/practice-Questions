@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <h1>count</h1> -->
+    <!-- <p id="demo">0</p> -->
+    <!-- <button id="btn" onclick="add()">add count</button> -->
+    <script>
+      // const add = function myFunc(){
+      //     let count = 0
+      //     return function(){
+      //         count += 1;
+      //         document.getElementById("demo").innerHTML = count
+      //     }
+      // }()
+
+      function greet(name) {
+        return `Hello, ${name}!`;
+      }
+
+      function processUserInput(callback) {
+        const name = prompt("Enter your name:");
+        if(name == ""){
+            console.log("please refresh and add proper name")
+        } else {
+        console.log(callback(name));
+        }
+    }
+
+      processUserInput(greet);
+    </script>
+  </body>
+</html>

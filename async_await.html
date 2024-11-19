@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      async function makeApiCall() {
+        try {
+          const url = "./sample4.json";
+          const response = await fetch(url);
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+  
+          const jsonRes = await response.json();
+          console.log("Actual JSON Response:", jsonRes);
+  
+          for (let x in jsonRes.people) {
+            document.getElementById("demo").innerHTML += JSON.stringify(jsonRes.people[x]) + "<br>";
+          }
+        } catch (error) {
+          document.getElementById("demo").innerHTML = `Error: ${error.message}`;
+          console.error(error);
+        }
+      }
+  
+      makeApiCall();
+    </script>
+  </body>
+  
+</html>
