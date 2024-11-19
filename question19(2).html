@@ -51,7 +51,20 @@
       //   }
       //   console.log(compressString("aaabbccc"));
 
-      //5)Create a function that takes an array of objects and groups them by a specific property.
+      //5)counter with closure
+    //   function closure(){
+    //     let count = 0
+    //     return function(){
+    //         count++;
+    //         return count
+    //     }
+    //   }
+    //   let increment = closure()
+    //   console.log(increment())
+    //   console.log(increment())
+    //   console.log(increment())
+
+      //6)Create a function that takes an array of objects and groups them by a specific property.
       const arr = [
         {
           firstName: "Joe",
@@ -83,6 +96,9 @@
         },
       ]
       console.log(Object.groupBy(arr,item=>item.gender))
+
+
+    
     </script>
   </body>
 </html>
