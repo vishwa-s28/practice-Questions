@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //1)in array find by id and change name
+      // const arr = [
+      //   { id: 1, name: "vishwa", des: "sd" },
+      //   { id: 2, name: "v", des: "re" },
+      //   { id: 1, name: "gth", des: "rtyb" },
+      // ];
+      // let x = arr.find((o) => o.id === 1);
+      // x.name = "vishwa satasiya";
+      // console.log(arr);
+
+      //2)recursive function to find factorial of given number
+      // function fact(num){
+      //   if(num<=1) return 1;
+      //   else return num*fact(num-1);
+      // }
+      // console.log(`factorial is ${fact(6)}`)
+
+      //3)merge 2 array unique element and return arr
+      // function merge(arr1, arr2) {
+      //   const set = new Set([...arr1, ...arr2]);
+      //   const arr = Array.from(set).sort((a, b) => a - b);
+      //   return arr;
+      // }
+      // console.log(merge([1, 2, 4, 5, 6], [6, 7, 5, 4, 8, 3, 9]));
+
+      //4)flaten nested array
+      // const flattenArray = (nestedArray) => {
+      //   return nestedArray.flat(Infinity).sort((a, b) => a - b);
+      // };
+      // console.log(
+      //   flattenArray([1, 2, [3, [5, 4], 6], 7, [67, 4, 6], 6, [87, 95]])
+      // );
+
+      //5)2 string are anagram or not
+      // function anagram(str1,str2){
+      //   return str1.split("").sort().join("") === str2.split("").sort().join("")
+      // }
+      // console.log(anagram("listen","silent"))
+
+      //6)fibonacci series upto given number
+      // function fibonaccie(num){
+      //   const arr = [0,1]
+      //   for(let x=2; x<=num; x++){
+      //     arr[x] = arr[x-1] + arr[x-2]
+      //   }
+      //   return arr
+      // } console.log(fibonaccie(5))
+
+      //7)prime or not
+      // let num = 11;
+      // function prime(num) {
+      //   if (num <= 1) return false;
+      //   for (let i = 2; i <= Math.sqrt(num); i++) {
+      //     if (num % i === 0) return false;
+      //   }
+      //   return true;
+      // }
+      // console.log(prime(num));
+
+      //8)reverse string
+      // let str = "vishwa satasiya"
+      // console.log(str.split("").reverse().join(""))
+
+      //9)max and min from array of numbers
+      // const arr = [2,4,655,76,8,3335,9657,463]
+      // console.log(`minimum number is ${Math.min(...arr)} and maximum number is ${Math.max(...arr)}`)
+
+      //10)print largest diff btw any 2 element in array
+      const arr = [-2,-4,6,8,44,5,6,3,7,89,0]
+      let min = arr[0]
+      let maxDiff = 0
+      for(let i=0; i<arr.length; i++){
+        if(arr[i] < min){
+          min = arr[i]
+        }
+        else{
+          const diff = arr[i]-min
+          if(diff > maxDiff){
+            maxDiff = diff
+          }
+        }
+      }
+      console.log(`Maximum difference is ${maxDiff}`)
+    </script>
+  </body>
+</html>

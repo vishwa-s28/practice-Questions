@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //1)Convert an object to an array of key-value pairs (e.g., {a: 1, b: 2} becomes [["a", 1], ["b", 2]])
+      //   const obj = { a: 1, b: 2, c: 3 };
+      //   const res = [];
+      //   for (key in obj) {
+      //     res.push([key,obj[key]])
+      // console.log(`key = ${key} and value = ${obj[key]}`);
+      //   }
+      //   console.log(res)
+
+      //2)Group an array of strings by their length.
+      // const arr = ["vi","sh","wa","vis","hwa","vishwa","shwavi"]
+      // console.log(Object.groupBy(arr, item => item.length))
+
+      //3)Implement a function to find the longest common prefix among an array of strings.
+      //   const arr = ["flowers", "flow", "flight"];
+      //   function pre(arr) {
+      //     let prefix = arr[0];
+      //     for (let i = 0; i < arr.length; i++) {
+      //       while (arr[i].indexOf(prefix) !== 0) {
+      //         prefix = prefix.substring(0, prefix.length - 1);
+      //         if (prefix === "") return "";
+      //       }
+      //     }
+      //     return prefix;
+      //   }
+      //   console.log(pre(arr));
+
+      //4)Write a function to compress a string (e.g., "aaabbccc" becomes "a3b2c3").
+      //   function compressString(str) {
+      //     let result = "";
+      //     let count = 1;
+      //     for (let i = 1; i < str.length; i++) {
+      //       if (str[i] === str[i - 1]) {
+      //         count++;
+      //       } else {
+      //         result += str[i - 1] + count;
+      //         count = 1;
+      //       }
+      //     }
+      //     result += str[str.length - 1] + count;
+      //     return result;
+      //   }
+      //   console.log(compressString("aaabbccc"));
+
+      //5)Create a function that takes an array of objects and groups them by a specific property.
+      const arr = [
+        {
+          firstName: "Joe",
+          lastName: "Jackson",
+          gender: "male",
+          age: 28,
+          number: "7349282382",
+        },
+        {
+          firstName: "James",
+          lastName: "Smith",
+          gender: "male",
+          age: 32,
+          number: "5678568567",
+        },
+        {
+          firstName: "Emily",
+          lastName: "Jones",
+          gender: "female",
+          age: 24,
+          number: "456754675",
+        },
+        {
+          firstName: "fjvknk",
+          lastName: "ffsj",
+          gender: "female",
+          age: 25,
+          number: "23456689",
+        },
+      ]
+      console.log(Object.groupBy(arr,item=>item.gender))
+    </script>
+  </body>
+</html>
