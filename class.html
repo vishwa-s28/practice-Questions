@@ -52,6 +52,167 @@
       //   account.withdraw(2000);
       //   console.log(account.getBalance());
 
+      // class Person {
+      //   constructor(firstname, lastname) {
+      //     this._firstname = firstname;
+      //     this._lastname = lastname;
+      //   }
+      //   get firstname() {
+      //     return this._firstname;
+      //   }
+      //   set firstname(x) {
+      //     this._firstname = x;
+      //   }
+
+      //   getFullName() {
+      //     return `${this._firstname} ${this._lastname}`;
+      //   }
+      // }
+      // const person = new Person("John", "Doe");
+      // console.log(person.getFullName());
+      // person.firstname = "Jane";
+      // console.log(person.getFullName());
+
+      // class Rectangle {
+      //   constructor(width, height) {
+      //     this._width = width;
+      //     this._height = height;
+      //   }
+      //   getArea() {
+      //     return this._height * this._width;
+      //   }
+      //   getPerimeter() {
+      //     return 2 * (this._height + this._width);
+      //   }
+      // }
+      // const rectangle = new Rectangle(5, 10);
+      // console.log(rectangle.getArea());
+      // console.log(rectangle.getPerimeter());
+
+      // class Person {
+      //   constructor(name, age) {
+      //     this._name = name;
+      //     this._age = age;
+      //   }
+      // }
+      // class Student extends Person {
+      //   constructor(name, age, studentID, grades) {
+      //     super(name, age);
+      //     this._studentID = studentID;
+      //     this._grades = grades;
+      //   }
+      //   getGradeAverage() {
+      //     let sum = 0;
+      //     for (let x of this._grades) {
+      //       sum += x;
+      //     }
+      //     let avg = sum / this._grades.length
+      //     console.log(avg)
+      //   }
+      // }
+      // const student = new Student("Alice", 20, "S123", [90, 85, 88]);
+      // student.getGradeAverage();
+
+      // class Book {
+      //   constructor(title, author, isAvailable) {
+      //     this._title = title;
+      //     this._author = author;
+      //     this._isAvailable = isAvailable;
+      //   }
+      //   borrowBook() {
+      //     this._isAvailable = false;
+      //   }
+      //   returnBook() {
+      //     this._isAvailable = true;
+      //   }
+      //   getBookInfo() {
+      //     return `"${this._title}, ${this._author}, ${
+      //       this._isAvailable ? "available" : "Unavailable"
+      //     }"`;
+      //   }
+      // }
+      // class Library extends Book {
+      //   constructor() {
+      //     super()
+      //     this.book = [];
+      //   }
+      //   addBook(book) {
+      //     this.book.push(book);
+      //   }
+      //   findBook(title) {
+      //     return this.book.find((book) => book._title === title) || null;
+      //   }
+      // }
+      // const library = new Library();
+      // const book1 = new Book("1984", "George Orwell", true);
+      // const book2 = new Book("Brave New World", "Aldous Huxley", true);
+
+      // library.addBook(book1);
+      // library.addBook(book2);
+
+      // console.log(library.findBook("1984").getBookInfo());
+      // book1.borrowBook();
+      // console.log(book1.getBookInfo());
+
+      // class Stack {
+      //   constructor() {
+      //     this.stack = [];
+      //   }
+      //   push(item) {
+      //     this.stack.push(item);
+      //   }
+      //   pop() {
+      //     if (this.isEmpty()) {
+      //       return null;
+      //     }
+      //     return this.stack.pop();
+      //   }
+      //   peek() {
+      //     if (this.isEmpty()) {
+      //       return null;
+      //     }
+      //     return this.stack[this.stack.length - 1];
+      //   }
+      //   isEmpty() {
+      //     return this.stack.length === 0
+      //   }
+      // }
+      // const stack1 = new Stack();
+      // stack1.push(10);
+      // stack1.push(20);
+      // console.log(stack1.peek());
+      // console.log(stack1.pop());
+      // console.log(stack1.isEmpty());
+
+      class Queue {
+        constructor(){
+          this.queue = []
+        }
+        enqueue(item){
+          this.queue.push(item);
+        }
+        dequeue(){
+          if(this.isEmpty()){
+            return null
+          }
+          return this.queue.shift();
+        }
+        peek(){
+          if(this.isEmpty()){
+            return null;
+          }
+          return this.queue[0];
+        }
+        isEmpty(){
+          return this.queue.length === 0;
+        }
+      }
+      const queue = new Queue();
+      queue.enqueue(10);
+      queue.enqueue(20);
+      console.log(queue.peek());
+      console.log(queue.dequeue());
+      console.log(queue.isEmpty());
     </script>
   </body>
 </html>
