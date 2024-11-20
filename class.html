@@ -26,6 +26,7 @@
       //   console.log(myCar.getCarInfo());
       //   console.log(myCar.isNew())
 
+
       //   class BankAccount {
       //     constructor(accountHolder, balance) {
       //       this.accountHolder = accountHolder;
@@ -184,35 +185,48 @@
       // console.log(stack1.pop());
       // console.log(stack1.isEmpty());
 
-      class Queue {
-        constructor(){
-          this.queue = []
+      // class Queue {
+      //   constructor(){
+      //     this.queue = []
+      //   }
+      //   enqueue(item){
+      //     this.queue.push(item);
+      //   }
+      //   dequeue(){
+      //     if(this.isEmpty()){
+      //       return null
+      //     }
+      //     return this.queue.shift();
+      //   }
+      //   peek(){
+      //     if(this.isEmpty()){
+      //       return null;
+      //     }
+      //     return this.queue[0];
+      //   }
+      //   isEmpty(){
+      //     return this.queue.length === 0;
+      //   }
+      // }
+      // const queue = new Queue();
+      // queue.enqueue(10);
+      // queue.enqueue(20);
+      // console.log(queue.peek());
+      // console.log(queue.dequeue());
+      // console.log(queue.isEmpty());
+
+      class Movie {
+        constructor(title, director, releaseYear) {
+          this.title = title;
+          this.director = director;
+          this.releaseYear = releaseYear;
         }
-        enqueue(item){
-          this.queue.push(item);
-        }
-        dequeue(){
-          if(this.isEmpty()){
-            return null
-          }
-          return this.queue.shift();
-        }
-        peek(){
-          if(this.isEmpty()){
-            return null;
-          }
-          return this.queue[0];
-        }
-        isEmpty(){
-          return this.queue.length === 0;
+        static getMovieInfo(movie) {
+          return `"${movie.title}, ${movie.director}, release year = ${movie.releaseYear}"`;
         }
       }
-      const queue = new Queue();
-      queue.enqueue(10);
-      queue.enqueue(20);
-      console.log(queue.peek());
-      console.log(queue.dequeue());
-      console.log(queue.isEmpty());
+      const movie = new Movie("citadel", "russo brothers", 2024);
+      console.log(Movie.getMovieInfo(movie));
     </script>
   </body>
 </html>
